@@ -17,7 +17,7 @@ n = len(data)
 split = int(n*split_percent)
 train_data = data[range(split)]
 test_data = data[split:]
-
+#
 print("Get Data Successful!")
 orchest.output((train_data, test_data), name = "train_test_data")
 
