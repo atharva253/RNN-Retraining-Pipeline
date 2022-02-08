@@ -1,0 +1,103 @@
+{
+    "name": "Main",
+    "parameters": {},
+    "settings": {
+        "auto_eviction": false,
+        "data_passing_memory_size": "1GB"
+    },
+    "steps": {
+        "1cab44b9-cdbb-4c62-8a7f-c7bfe11d5424": {
+            "environment": "7962e22f-8b9b-41bc-b48c-5e23dfafd22b",
+            "file_path": "results.ipynb",
+            "incoming_connections": [
+                "f482d085-71b0-4fc5-ba47-3e31e99f89cf"
+            ],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    819.5,
+                    293.5
+                ]
+            },
+            "parameters": {},
+            "title": "Results",
+            "uuid": "1cab44b9-cdbb-4c62-8a7f-c7bfe11d5424"
+        },
+        "ac89da16-c3f7-44a8-b38f-b1acd48643a9": {
+            "environment": "7962e22f-8b9b-41bc-b48c-5e23dfafd22b",
+            "file_path": "get_xy.py",
+            "incoming_connections": [
+                "cbe47107-7edd-463e-af2f-47097617bb57"
+            ],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    350.5,
+                    293.5
+                ]
+            },
+            "parameters": {
+                "time_steps": 12
+            },
+            "title": "Get_XY",
+            "uuid": "ac89da16-c3f7-44a8-b38f-b1acd48643a9"
+        },
+        "cbe47107-7edd-463e-af2f-47097617bb57": {
+            "environment": "7962e22f-8b9b-41bc-b48c-5e23dfafd22b",
+            "file_path": "get_data.py",
+            "incoming_connections": [],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    84.5,
+                    293.5
+                ]
+            },
+            "parameters": {
+                "filename": "sunspots.csv",
+                "split_percent": 0.8
+            },
+            "title": "Get Data",
+            "uuid": "cbe47107-7edd-463e-af2f-47097617bb57"
+        },
+        "f482d085-71b0-4fc5-ba47-3e31e99f89cf": {
+            "environment": "7962e22f-8b9b-41bc-b48c-5e23dfafd22b",
+            "file_path": "create_RNN.py",
+            "incoming_connections": [
+                "ac89da16-c3f7-44a8-b38f-b1acd48643a9"
+            ],
+            "kernel": {
+                "display_name": "Python 3",
+                "name": "python"
+            },
+            "meta_data": {
+                "hidden": false,
+                "position": [
+                    580.5,
+                    294.5
+                ]
+            },
+            "parameters": {
+                "dense_units": 1,
+                "hidden_units": 3,
+                "num_epochs": 20
+            },
+            "title": "RNN Training",
+            "uuid": "f482d085-71b0-4fc5-ba47-3e31e99f89cf"
+        }
+    },
+    "uuid": "af162e9f-8b13-4e58-ac46-8c08bdccc1e7",
+    "version": "1.0.0"
+}
