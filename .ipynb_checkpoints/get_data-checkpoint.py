@@ -3,7 +3,7 @@ from pandas import read_csv
 import numpy as np
 from sklearn.preprocessing import MinMaxScaler
 
-# Get the parameters
+## Get the parameters
 split_percent = orchest.get_step_param("split_percent")
 filename = orchest.get_step_param("filename")
 
@@ -13,7 +13,7 @@ scaler = MinMaxScaler(feature_range=(0, 1))
 data = scaler.fit_transform(data).flatten()
 n = len(data)
 
-# Point for splitting data into train and test
+## Point for splitting data into train and test
 split = int(n*split_percent)
 train_data = data[range(split)]
 test_data = data[split:]
